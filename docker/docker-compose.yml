@@ -12,7 +12,7 @@ services:
       # - '21:21' # FTP
 
     environment:
-      TZ: "America/Los_Angeles"
+      TZ: "${TZ}"
 
       # Uncomment this if you want to change the location of
       # the SQLite DB file within the container
@@ -30,9 +30,9 @@ services:
 
 volumes:
   data:
-    name: ${VOLUME_DATA}
+    # name: ${VOLUME_DATA}
   letsencrypt:
-    name: ${VOLUME_LETSENCRYPT}
+    # name: ${VOLUME_LETSENCRYPT}
 
 networks:
   nginx-proxy-manager:

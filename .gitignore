@@ -78,14 +78,4 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux
 
 ### Custom ###
-.bindmounts
-.bind-mounts
 .env
-.volumes
-config.yml
-config.yaml
-dashboard.env
-.secret
-.secrets
-*.secret
-*.secrets
