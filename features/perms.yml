@@ -1,0 +1,6 @@
+---
+services:
+  nginx-proxy-manager:
+    environment:
+      PUID: ${PUID:-0}
+      PGID: ${PGID:-0}

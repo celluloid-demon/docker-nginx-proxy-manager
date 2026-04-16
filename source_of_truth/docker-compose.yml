@@ -1,20 +1,19 @@
----
-# (Minimum viable service)
+# Source: https://nginxproxymanager.com/setup/
 services:
-  nginx-proxy-manager:
-    image: ${IMAGE:-jc21/nginx-proxy-manager}:${TAG:-2.14.0}
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
 
     ports:
       # These ports are in format <host-port>:<container-port>
-      - 80:80 # Public HTTP Port
-      - 443:443 # Public HTTPS Port
-      - ${ADMIN_PORT:-81}:81 # Admin Web Port
+      - '80:80' # Public HTTP Port
+      - '443:443' # Public HTTPS Port
+      - '81:81' # Admin Web Port
       # Add any other Stream port you want to expose
       # - '21:21' # FTP
 
     environment:
-      TZ: "${TZ:-Australia/Brisbane}"
+      TZ: "Australia/Brisbane"
 
       # Uncomment this if you want to change the location of
       # the SQLite DB file within the container
@@ -24,5 +23,5 @@ services:
       # DISABLE_IPV6: 'true'
 
     volumes:
-      - ${DATA:-./data}:/data
-      - ${LETSENCRYPT:-./letsencrypt}:/etc/letsencrypt
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt

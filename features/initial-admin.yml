@@ -1,0 +1,6 @@
+---
+services:
+  nginx-proxy-manager:
+    environment:
+      INITIAL_ADMIN_EMAIL: ${INITIAL_ADMIN_EMAIL}
+      INITIAL_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD}

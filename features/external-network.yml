@@ -1,0 +1,9 @@
+---
+services:
+  nginx-proxy-manager:
+    networks:
+      - nginx-proxy-manager
+
+networks:
+  nginx-proxy-manager:
+    external: true
