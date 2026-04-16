@@ -1,5 +1,6 @@
 ---
-# (Minimum viable service)
+# Minimum viable service - reflects source_of_truth yml file as closely as
+# possible to make management easier, while still allowing for overrides.
 services:
   nginx-proxy-manager:
     image: ${IMAGE:-jc21/nginx-proxy-manager}:${TAG:-2.14.0}
