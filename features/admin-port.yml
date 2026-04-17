@@ -1,0 +1,5 @@
+---
+services:
+  nginx-proxy-manager:
+    ports:
+      - ${ADMIN_PORT:-81}:81 # Admin Web Port
