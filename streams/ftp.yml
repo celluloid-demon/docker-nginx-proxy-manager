@@ -2,4 +2,4 @@
 services:
   nginx-proxy-manager:
     ports:
-      - '21:21' # FTP
+      - "21:${FTP_PORT:-21}" # FTP
