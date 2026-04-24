@@ -79,4 +79,8 @@ $RECYCLE.BIN/
 
 ### Custom ###
 .env
+bind-mounts
 env
+env-files
+secrets
+volume-archives
