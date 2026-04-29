@@ -1,0 +1,13 @@
+services:
+  nginx-proxy-manager:
+    image: ${IMAGE:-jc21/nginx-proxy-manager}:${TAG:-2.14.0}
+
+    ports:
+      - ${ADMIN_PORT:-81}:81 # Admin Web Port
+
+    environment:
+      TZ: "${TZ:-Australia/Brisbane}"
+
+    volumes:
+      - ${DATA:-./data}:/data
+      - ${LETSENCRYPT:-./letsencrypt}:/etc/letsencrypt
