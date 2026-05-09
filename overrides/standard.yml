@@ -9,5 +9,5 @@ services:
       TZ: "${TZ:-Australia/Brisbane}"
 
     volumes:
-      - ${DATA:-./data}:/data
-      - ${LETSENCRYPT:-./letsencrypt}:/etc/letsencrypt
+      - ${VOLUMES}/data:/data
+      - ${VOLUMES}/letsencrypt:/etc/letsencrypt
