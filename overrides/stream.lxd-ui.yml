@@ -1,0 +1,5 @@
+---
+services:
+  nginx-proxy-manager:
+    ports:
+      - "443:${LXD_UI_PORT:-8443}" # Canonical LXD UI
